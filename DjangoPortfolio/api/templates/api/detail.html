@@ -1,0 +1,45 @@
+{% extends "api/base.html" %}
+{% block content %}
+{% load static %}
+<main>
+  <div class="container-md">
+    <div class="row mt-4">
+      <div class="col">
+		<div class="row text-center">
+			<h1>{{project.title}}</h1>
+		</div>
+		<div class="row text-center">
+			<p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;{{project.posted|date:'M d'}}</p>
+		</div>
+		<div class="row text-start">
+			<p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;{{body.intro}}</p>
+		</div>
+      </div>
+	  <div id="myCarousel" class="carousel slide w-50 col justify-content-center" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src={{project.thumbnail.url}} width="100%" aria-hidden="true" focusable="false"></img>
+		  </div>
+		  {% for image in images %}
+		  <div class="carousel-item">
+			  <img src={{image.image.url}} height="100%" aria-hidden="true" focusable="false"></img>
+		  </div>
+		  {% endfor %}
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	  </div>
+	<div class="row mt-4">
+		<p class="lead">{{body.body}}</p>
+	</div>
+  </div>
+</main>
+
+{% endblock %}

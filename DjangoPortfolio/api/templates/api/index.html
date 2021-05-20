@@ -1,0 +1,62 @@
+{% extends 'api/base.html' %}
+{% block content %}
+{% load static %}
+<main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg> -->
+                <img src="{% static 'resources/landing.jpg' %}" width="100%" height="100%" aria-hidden="true"></img>
+
+                    <div class="carousel-caption align-bottom">
+                        <h1>Mason Ballard</h1>
+                        <p>Welcome to my website! Take a look around!</p>
+                        <p><a class="btn btn-lg btn-light" href="{% url 'projects' %}">Go to Projects &raquo;</a></p>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+            <img class="rounded-circle" src="{% static 'resources/github_logo.png' %}" width="140" height="140" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <h2>GitHub</h2>
+            <p>This website is a great way to get an overview of some of the stuff I've worked on. To get a deeper look or to actually browse some of my code, check out my Github.</p>
+            <p><a class="btn btn-secondary" href="https://github.com/mballard29">Go to Github &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+			<img class="rounded-circle" src="{% static 'resources/linkedIn_logo.png' %}" width="140" height="140" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <h2>LinkedIn</h2>
+            <p>If you'd like to see some my past experience and things I've participated in, connect with me on LinkedIn.</p>
+            <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/mason-ballard/">Go to LinkedIn &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+			<img class="rounded-circle" src="{% static 'resources/email.png' %}" width="140" height="140" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <h2>Contact Me</h2>
+            <p>LinkedIn is a great way to connect, but if that's not your thing feel free to email me with questions or just to say hi!</p>
+            <p><a class="btn btn-secondary" href="mailto:masonballard.io@gmail.com">Email me &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Mason Ballard <span class="text-muted">A bit about me.</span></h2>
+            <p class="lead">Add a little bit about me here.</p>
+          </div>
+          <div class="col-md-5">
+            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+			<img src="{% static 'resources/about.jpeg' %}" class="featurette-image img-fluid mx-auto" width="500" height="500" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+    </div>
+</main>
+{% endblock %}
